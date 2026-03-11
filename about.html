@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About the Insane Comedy Group — who we are and what we make.">
+  <title>About — ICG Community Creations</title>
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/267151413?v=4&s=32" type="image/png">
+  <link rel="apple-touch-icon" href="https://avatars.githubusercontent.com/u/267151413?v=4&s=180">
+  <meta property="og:title" content="About — ICG Community Creations">
+  <meta property="og:description" content="About the Insane Comedy Group — who we are and what we make.">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/267151413?v=4&s=400">
+  <meta property="og:url" content="https://icg-community.github.io/about.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="alternate" type="application/rss+xml" title="ICG RSS Feed" href="https://icg-community.github.io/feed.xml">
+  <style>
+    .about-hero {
+      background: linear-gradient(160deg, var(--ca-indigo-dark) 0%, var(--ca-violet) 50%, var(--ca-indigo) 100%);
+      color: var(--ca-gray-50);
+      padding: 5rem 0 4rem;
+      text-align: center;
+    }
+    .about-hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+    .about-hero p {
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      max-width: 40rem;
+      margin: 0 auto;
+      opacity: 0.92;
+      line-height: 1.7;
+    }
+    .about-content {
+      padding: 4rem 0;
+    }
+    .about-content h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 800;
+      color: var(--ca-gray-900);
+      margin-bottom: 1.25rem;
+    }
+    .about-content p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--ca-gray-700);
+      max-width: 48rem;
+      margin-bottom: 1.25rem;
+    }
+    .about-content a {
+      color: var(--ca-indigo-light);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .about-content a:hover {
+      text-decoration-thickness: 2px;
+    }
+    .about-values {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+      gap: 2rem;
+      margin: 2.5rem 0;
+    }
+    .about-value {
+      padding: 1.5rem;
+      background: var(--ca-gray-50);
+      border: 1px solid var(--ca-gray-200);
+      border-radius: 12px;
+    }
+    .about-value h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--ca-gray-900);
+      margin-bottom: 0.5rem;
+    }
+    .about-value p {
+      font-size: 0.95rem;
+      margin-bottom: 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 1.5rem;
+    }
+    @media (max-width: 48rem) {
+      .footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    }
+    .footer-logo {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--ca-gray-50);
+    }
+    .footer-tagline {
+      color: #9ca3af;
+      font-size: 0.9rem;
+      margin-top: 0.25rem;
+    }
+    .footer-column h3 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 0.75rem;
+    }
+    .footer-column .footer-links {
+      list-style: none;
+    }
+    .footer-column .footer-links li {
+      margin-bottom: 0.4rem;
+    }
+    .footer-column .footer-links a {
+      color: #9ca3af;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color var(--transition);
+    }
+    .footer-column .footer-links a:hover {
+      color: var(--ca-emerald-light);
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="ICG home">
+      <img class="logo-mark" src="https://avatars.githubusercontent.com/u/267151413?v=4&s=80" alt="" width="40" height="40" loading="eager">
+      <span class="logo-text">ICG Community Creations</span>
+    </a>
+    <nav class="header-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="news.html">News</a></li>
+        <li><a href="repos.html">Repositories</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="https://www.youtube.com/channel/UCn4N-5R3p_j01f7HUYO3AMA">YouTube</a></li>
+        <li><a href="https://github.com/icg-community">GitHub</a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch to dark mode">
+      <span class="icon-sun" aria-hidden="true">&#9728;&#65039;</span>
+      <span class="icon-moon" aria-hidden="true">&#9790;&#65039;</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="about-hero">
+  <div class="container">
+    <h1>About the ICG</h1>
+    <p>The New Insane Comedy Group makes comedy videos, animated shorts, and software tools &mdash; bringing insane ideas to life since day one.</p>
+  </div>
+</section>
+
+<section class="about-content">
+  <div class="container">
+    <h2>Who We Are</h2>
+    <p>The New Insane Comedy Group (ICG) is a comedy collective that produces sketch videos, animated mini-series, and parody commercials. Our content lives on <a href="https://www.youtube.com/channel/UCn4N-5R3p_j01f7HUYO3AMA">our YouTube channel</a>, where we have built a library of original comedy spanning multiple series and formats.</p>
+    <p>From the long-running <strong>Punxsutawney Today</strong> commercial parodies to the story-driven <strong>ICG Minis</strong> animated shorts and the classic <strong>Kenny Clark&rsquo;s Funny Signs</strong>, we create the kind of comedy we want to see in the world.</p>
+
+    <h2>What We Make</h2>
+    <div class="about-values">
+      <div class="about-value">
+        <h3>Punxsutawney Today</h3>
+        <p>A series of parody TV commercials based on the old Empire Today carpet commercials. Absurd products, questionable sales tactics, and questionable customer service.</p>
+      </div>
+      <div class="about-value">
+        <h3>ICG Minis</h3>
+        <p>Animated mini-episodes featuring an expanding cast of characters, storylines involving Hades, the Ash family, and plenty of twists.</p>
+      </div>
+      <div class="about-value">
+        <h3>ICG Classics</h3>
+        <p>Re-releases of classic ICG content including Kenny Clark&rsquo;s Funny Signs series and other fan favourites from the archives.</p>
+      </div>
+      <div class="about-value">
+        <h3>Software Projects</h3>
+        <p>Tools and projects built by the ICG community, hosted on <a href="https://github.com/icg-community">our GitHub</a>. This website is one of them.</p>
+      </div>
+    </div>
+
+    <h2>Find Us</h2>
+    <p>Watch our videos on <a href="https://www.youtube.com/channel/UCn4N-5R3p_j01f7HUYO3AMA">YouTube</a> and explore our projects on <a href="https://github.com/icg-community">GitHub</a>.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="footer-logo">ICG Community Creations</span>
+        <p class="footer-tagline">Insane ideas, brought to life.</p>
+      </div>
+      <div class="footer-column">
+        <h3>Site</h3>
+        <ul class="footer-links">
+          <li><a href="news.html">News</a></li>
+          <li><a href="repos.html">Repositories</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="feed.xml">RSS Feed</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Elsewhere</h3>
+        <ul class="footer-links">
+          <li><a href="https://www.youtube.com/channel/UCn4N-5R3p_j01f7HUYO3AMA">YouTube</a></li>
+          <li><a href="https://github.com/icg-community">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-copy">&copy; The New Insane Comedy Group.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+
+</body>
+</html>
