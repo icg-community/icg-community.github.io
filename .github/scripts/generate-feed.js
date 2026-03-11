@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const SITE_URL = 'https://community-access.org';
+const SITE_URL = 'https://icg-community.github.io';
 const posts = JSON.parse(fs.readFileSync(path.join(__dirname, '../../posts/posts.json'), 'utf8'));
 
 // Sort newest first
