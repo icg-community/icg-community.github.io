@@ -9,7 +9,12 @@ const POSTS_DIR = path.join(__dirname, '../../posts');
 
 function fetch(url) {
   return new Promise((resolve, reject) => {
-    https.get(url, (res) => {
+    const opts = typeof url === 'string' ? new URL(url) : url;
+    opts.headers = { 'User-Agent': 'Mozilla/5.0 (compatible; ICGBot/1.0)' };
+    https.get(opts, (res) => {
+      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+        return fetch(res.headers.location).then(resolve, reject);
+      }
       if (res.statusCode < 200 || res.statusCode >= 300) {
         return reject(new Error(`HTTP ${res.statusCode}`));
       }
