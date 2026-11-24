@@ -7,6 +7,13 @@ const FEED_URL = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_
 const POSTS_PATH = path.join(__dirname, '../../posts/posts.json');
 const POSTS_DIR = path.join(__dirname, '../../posts');
 
+const MAX_ATTEMPTS = 3;
+const RETRY_DELAY_MS = 10000;
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 function fetch(url) {
   return new Promise((resolve, reject) => {
     const opts = typeof url === 'string' ? new URL(url) : url;
@@ -23,6 +30,20 @@ function fetch(url) {
       res.on('end', () => resolve(data));
     }).on('error', reject);
   });
+}
+
+async function fetchWithRetry(url) {
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    try {
+      return await fetch(url);
+    } catch (err) {
+      if (attempt === MAX_ATTEMPTS) {
+        throw err;
+      }
+      console.log(`Fetch failed (attempt ${attempt} of ${MAX_ATTEMPTS}): ${err.message}. Retrying in ${RETRY_DELAY_MS / 1000} seconds...`);
+      await sleep(RETRY_DELAY_MS);
+    }
+  }
 }
 
 function extractEntries(xml) {
@@ -65,7 +86,7 @@ function getFirstParagraph(description) {
 
 async function main() {
   console.log('Fetching YouTube RSS feed...');
-  const xml = await fetch(FEED_URL);
+  const xml = await fetchWithRetry(FEED_URL);
   const entries = extractEntries(xml);
   console.log(`Found ${entries.length} videos in feed`);
 
